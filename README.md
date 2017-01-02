@@ -12,7 +12,7 @@ If you are developer (case: Linux, MacOS)
 
 	$ go get github.com/girigiribauer/go-pwgen
 
-	$ cd $GOPATH/src/github.com/girigiribauer/go-pwgen
+	$ cd $GOPATH/src/github.com/girigiribauer/go-pwgen/cmd/pw
 
 	$ go install
 
