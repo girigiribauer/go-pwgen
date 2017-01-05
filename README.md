@@ -46,7 +46,7 @@ See `pw -h`
        --digit                   add password characters 0-9
        --alphabetlarge           add password characters A-Z
        --alphabetsmall           add password characters a-z
-       --underscore, -u          add password character Underscore(_)
+       --underscore, -u          add password character Underscore(\_)
        --specialchars, -s        add password characters special characters, exclude from Space, Backslash, Underscore and Delete
        --help, -h                show help
        --version, -v             print the version
