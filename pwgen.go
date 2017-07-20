@@ -1,10 +1,10 @@
 package pwgen
 
 import (
+	"crypto/rand"
 	"fmt"
 	"io"
-	"math/rand"
-	"time"
+	"math/big"
 
 	"github.com/nbutton23/zxcvbn-go"
 )
@@ -46,8 +46,6 @@ func init() {
 	codesetAlphabetLarge = getCodesetAlphabetLarge()
 	codesetAlphabetSmall = getCodesetAlphabetSmall()
 	codesetSpecialChars = getCodesetSpecialChars()
-
-	rand.Seed(time.Now().UnixNano())
 }
 
 func getCodesetDigit() []byte {
@@ -82,9 +80,13 @@ func randomByte(codeset []byte) byte {
 	if len(codeset) <= 0 {
 		return ' '
 	}
-	index := rand.Int31n(int32(len(codeset)))
+	length := big.NewInt(int64(len(codeset)))
+	index, err := rand.Int(rand.Reader, length)
+	if err != nil {
+		return ' '
+	}
 
-	return codeset[index]
+	return codeset[index.Uint64()]
 }
 
 func expandCodeset(factors int) []byte {
