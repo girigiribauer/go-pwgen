@@ -4,6 +4,24 @@ cli password generator by Golang
 
 
 
+## Introduction
+
+only type `pw`
+
+	% pw
+	ZIqUwU0znI
+	kLmDwR70LM
+	84ZlsZKQWX
+	kzwtaGJynq
+	WVQ89MpG7s
+	c6DPUJy6Fx
+	vznrIwJVcJ
+	8EpfBIoHRk
+	JFTX3OhitP
+	4igsXqCiKf
+
+
+
 ## Installation
 
 ### step1. Install pwgen
