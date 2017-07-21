@@ -12,7 +12,7 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "pw"
-	app.Version = "0.1.0"
+	app.Version = "0.2.1"
 	app.Compiled = time.Now()
 	app.Authors = []cli.Author{
 		cli.Author{
